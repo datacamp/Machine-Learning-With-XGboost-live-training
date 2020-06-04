@@ -24,12 +24,23 @@ This part of the 'Live training Spec' process is designed to help guide you thro
 > - Apply common spreadsheets operations such as pivot tables and vlookups in Python using `pandas`.
 > - Create simple, interesting visualizations using `matplotlib`.
 
+- How to decide whether to use gradient boosting or not
+- How to use XGBoost library ontop of scikit-learn 
+- How to evaluate models in XGBoost
+- How to tune parameters in XGBoost
+- How to visualize trees in XGBoost
+
 
 ### B. What technologies, packages, or functions will students use? Please be exhaustive.
 
 > - pandas
 > - matplotlib
 > - seaborn
+
+- pandas
+- numpy
+- scikit-learn
+- xgboost
 
 ### C. What terms or jargon will you define?
 
