@@ -19,6 +19,8 @@ This part of the 'Live training Spec' process is designed to help guide you thro
 - How to tune parameters in `XGBoost` to achieve the best results
 - How to visualize trees in `XGBoost` to analyze feature importance
 
+Note that there will be no pre-processing in this live training. The data will be presented with clean ready-to-use features.
+
 
 ### B. What technologies, packages, or functions will students use? Please be exhaustive.
 
@@ -32,8 +34,8 @@ This part of the 'Live training Spec' process is designed to help guide you thro
 _Whether during your opening and closing talk or your live training, you might have to define some terms and jargon to walk students through a problem you’re solving. Intuitive explanations using analogies are encouraged._
 
 - Decision Trees
+- CART 
 - Decision node
-- CART Trees
 - Boosting
 - Bagging
 - Gradient boosting (aka GBM and GBDT)
@@ -79,21 +81,25 @@ Terms like "beginner" and "expert" mean different things to different people, so
 
 - [ ] Data Consumer
 - [ ] Leader 
-- [ ] Data Analyst
+- [X] Data Analyst
 - [X] Citizen Data Scientist
-- [ ] Data Scientist
-- [X] Data Engineer
+- [X] Data Scientist
+- [ ] Data Engineer
 - [ ] Database Administrator
 - [ ] Statistician
 - [X] Machine Learning Scientist
-- [X] Programmer
+- [ ] Programmer
 - [ ] Other (please describe)
 
-I added Data Engineer and Programmer because XGBoost
+XGBoost is a powerful machine learning library that became very popular after winning several Kaggle competitions. It is an asset to anyone in machine learning or looking to upskill in machine learning (e.g., data analysts and citizen data scientists).
 
 ### What industries would this apply to?
 
 *List one or more industries that the content would be appropriate for.*
+
+This is relevant for all industries. 
+
+This isn't an industry, but this course is especially interesting for anyone who likes doing Kaggle competitions.
 
 
 ### What level of expertise should learners have before beginning the live training?
@@ -104,12 +110,17 @@ I added Data Engineer and Programmer because XGBoost
 > - Can run a linear regression, use it to make predictions, and interpret the coefficients.
 > - Can calculate grouped summary statistics using SELECT queries with GROUP BY clauses.
 
+- Can confidently use `scikit-learn` to train machine learning models, including functions like `fit()`, `predict()`, and `train_test_split()`.
+- Can describe a decision tree (or CART)
+- Can train and tune decision tree and random forest models in `scikit-learn` with cross validation.
+- Can define hyperparameter tuning, underfitting, overfitting, the bias-variance tradeoff, regularization, classification, regression, cross validation, grid search, and random search. These are concepts covered in [Supervised Learning with scikit-learn](https://learn.datacamp.com/courses/supervised-learning-with-scikit-learn), which is a pre-req to [Machine Learning with Tree-Based Models in Python](https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python) (listed below).
+
 
 ## Step 3: Prerequisites
 
 List any prerequisite courses you think your live training could use from. This could be the live session’s companion course or a course you think students should take before the session. Prerequisites act as a guiding principle for your session and will set the topic framework, but you do not have to limit yourself in the live session to the syntax used in the prerequisite courses.
 
-- [Machine Learning with Tree-Based Models in Python](https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python): Course student should take before the session because students should be comfortable with decision trees and familiar with the concept of ensemble methods with tree-based models (boosting, bagging, random forest). Otherwise, I will have to spend too much time introducing these topics.
+- [Machine Learning with Tree-Based Models in Python](https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python) (at least first three chapters): Course student should take before the session because students should be comfortable with decision trees and have heard of the concept of ensemble methods with tree-based models (bagging, random forest). Otherwise, I will have to spend too much time introducing these topics.
 -  [Extreme Gradient Boosting with XGBoost](https://learn.datacamp.com/courses/extreme-gradient-boosting-with-xgboost): Companion course, since it focuses on implementation with the XGBoost library. Other courses, including the one above, use the scikit-learn implementation.
 
 
