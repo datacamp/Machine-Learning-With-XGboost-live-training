@@ -54,7 +54,7 @@ _To help minimize the amount of Q&As and make your live training re-usable, list
 - Confusing boosting and bagging
 - Assuming that using XGBoost is always a good idea
 - Assuming that `DMatrix` is the same as `numpy`'s `array` or `pandas`'s `data frames`
-- `XGBoost` is a library specialized in gradient boosting. It is not an acronym or slang for gradient boosting. And, there are other libraries that allow you too implement gradient boostings (e.g, `scikit-learn`).
+- `XGBoost` is a library specialized in gradient boosting. It is not an acronym or slang for gradient boosting. And, there are other libraries that allow you to implement gradient boostings (e.g, `scikit-learn`).
 
 ### E. What datasets will you use? 
 
@@ -91,7 +91,7 @@ Terms like "beginner" and "expert" mean different things to different people, so
 - [ ] Programmer
 - [ ] Other (please describe)
 
-XGBoost is a powerful machine learning library that became very popular after winning several Kaggle competitions. It is an asset to anyone in machine learning or looking to upskill in machine learning (e.g., data analysts and citizen data scientists).
+XGBoost is a powerful machine learning library that became very popular after winning several Kaggle competitions. It is an asset to anyone in machine learning or looking to up-skill in machine learning (e.g., data analysts and citizen data scientists).
 
 ### What industries would this apply to?
 
@@ -137,32 +137,44 @@ A live training session usually begins with an introductory presentation, follow
 	- Compare its performance with other ML libraries 
 	- Introduce `XGBoost`'s `DMatrix` as an alternative to dataframes
 - Quick overview of the parameters available in gradient boosting
+   - *(most important time priority wise)* Discuss the different `booster` options and note that we will be using `gbtree` which uses a tree as a weak learner (this is the default and the most common). In contrast, there is a `gblinear` option that uses linear regression as weak learners.
 - Introduction of problem: can we predict whether a hotel booking will be cancelled?
 - Set expectations about Q&A
 
 ### Live Training
 #### Your first XGBoost Model
-- Import data and print header of DataFrame `pd.read_excel()`, `.head()`
-- Glimpse at the data to
-  - Get column types using `.dtypes`
-  - Use `.describe()`, `.info()`
-  - **Q&A** 
+- Print our data to see our features and put our data into a `DMatrix`
+- Create an XGBoost model with `xgb.train`
+- Based on our problem, decide on a evaluation metric with the parameter `eval_metric`
+- Improve performance with cross validation `xgb.cv` 
+- Visualize XGBoost trees with `xgb.plot_tree`
 
 #### Digging into Parameters
-- Convert date columns to datetime `pd.to_datetime()`
-- Change column names
-- Extract year, month from datetime `.strftime()`
-- Drop an irrelevant column `.drop()`
-- Fill missing values with `.fillna()`
+- List all the parameters in an XGBoost model
+- Follow proper parameter coding conventions with a dictionary, e.g., `params = {"objective":"reg:linear", "max_depth":2}`
+- Try different parameters and cover what they do (including how they impact model complexity):
+	- `booster`
+	- `num_boost_round`
+	- `objective`
+	- `max_depth`
+	- `num_trees` 
+	- `n_estimator`
+	- `min_child_weight`
+	- `early_stopping_rounds`
+	- `fold`
+	- `lambda`, `gamma` and `alpha` for regularization
+
 
 #### Hyperparameter tuning
 - Use `XGBoost`'s [Scikit-Learn API](https://xgboost.readthedocs.io/en/latest/python/python_api.html#module-xgboost.sklearn)
 - Grid search with `scikit-learn`'s `GridSearchCV`
 - Random search with `scikit-learn`'s `RandomizedSearchCV`
+- Have a pre-trained model ready to show how well we can tune and improve performance if given time.
 
 ### Ending slides
 - Recap of what we learned
 - What are the limits of gradient boosting? When should it not be used?
+- Briefly discuss how XGBoost can be used for regression since the session focused on a classification problem. Note this should be short because XGBoost outputs a probability value for classification problems.
 - Call to action and course recommendations
 
 ## Authoring your session
