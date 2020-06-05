@@ -12,52 +12,47 @@ This part of the 'Live training Spec' process is designed to help guide you thro
 
 ### A. What problem(s) will students learn how to solve? (minimum of 5 problems)
 
-> _Here's an example from the Python for Spreadsheeets Users live session_
->
-> - Key considerations to take in when transitioning from spreadsheets to Python.
-> - The Data Scientist mindset and keys to success in transitioning to Python.
-> - How to import `.xlsx` and `.csv` files into Python using `pandas`.
-> - How to filter a DataFrame using `pandas`.
-> - How to create new columns out of your DataFrame for more interesting features.
-> - Perform exploratory analysis of a DataFrame in `pandas`.
-> - How to clean a DataFrame using `pandas` to make it ready for analysis.
-> - Apply common spreadsheets operations such as pivot tables and vlookups in Python using `pandas`.
-> - Create simple, interesting visualizations using `matplotlib`.
-
 - How to decide whether to use gradient boosting or not
-- How to use XGBoost library ontop of scikit-learn 
-- How to evaluate models in XGBoost
-- How to tune parameters in XGBoost
-- How to visualize trees in XGBoost
+- How to instantiate and customize `XGBoost` models
+- How to use `XGBoost`'s `DMatrix` to optimize computing performance
+- How to evaluate models in `XGBoost` using the right metrics
+- How to tune parameters in `XGBoost` to achieve the best results
+- How to visualize trees in `XGBoost` to analyze feature importance
 
 
 ### B. What technologies, packages, or functions will students use? Please be exhaustive.
 
-> - pandas
-> - matplotlib
-> - seaborn
-
-- pandas
-- numpy
-- scikit-learn
-- xgboost
+- `pandas`
+- `numpy`
+- `scikit-learn` (maybe)
+- `xgboost`
 
 ### C. What terms or jargon will you define?
 
 _Whether during your opening and closing talk or your live training, you might have to define some terms and jargon to walk students through a problem you’re solving. Intuitive explanations using analogies are encouraged._
 
-> _Here's an example from the [Python for Spreadsheeets Users live session](https://www.datacamp.com/resources/webinars/live-training-python-for-spreadsheet-users)._
-> 
-> - Packages: Packages are pieces of software we can import to Python. Similar to how we download, install Excel on MacOs, we import pandas on Python. (You can find it at minute 6:30)
+- Decision Trees
+- Decision node
+- CART Trees
+- Boosting
+- Bagging
+- Gradient boosting (aka GBM and GBDT)
+- Loss function
+- Base learners
+- Weak Learners
+- Hyperparameter tuning
+- Grid search
+- Random Search
 
 ### D. What mistakes or misconceptions do you expect? 
 
 _To help minimize the amount of Q&As and make your live training re-usable, list out some mistakes and misconceptions you think students might encounter along the way._
 
-> _Here's an example from the [Data Visualization in Python live session](https://www.datacamp.com/resources/webinars/data-visualization-in-python)_
-> 
-> - Anatomy of a matplotlib figure: When calling a matplotlib plot, a figure, axes and plot is being created behind the background. (You can find it at minute 11)
-> - As long as you do understand how plots work behind the scenes, you don't need to memorize syntax to customize your plot. 
+
+- Confusing gradient boosting with gradient descent
+- Confusing boosting and bagging
+- Assuming that using XGBoost is always a good idea
+- Assuming that `DMatrix` is the same as `numpy`'s `array` or `pandas`'s `data frames`
 
 ### E. What datasets will you use? 
 
@@ -67,12 +62,16 @@ As a rule of thumb, your dataset should always answer yes to the following quest
 
 Check our [datasets to avoid](https://instructor-support.datacamp.com/en/articles/2360699-datasets-to-avoid) list. 
 
+**Dataset:** [Hotel Booking Demand](https://www.kaggle.com/jessemostipak/hotel-booking-demand)
+
+**Problem:** Predict whether a booking will be cancelled
+
 ## Step 2: Who is this session for?
 
 Terms like "beginner" and "expert" mean different things to different people, so we use personas to help instructors clarify a live training's audience. When designing a specific live training, instructors should explain how it will or won't help these people, and what extra skills or prerequisite knowledge they are assuming their students have above and beyond what's included in the persona.
 
-- [ ] Please select the roles and industries that align with your live training. 
-- [ ] Include an explanation describing your reasoning and any other relevant information. 
+- [X] Please select the roles and industries that align with your live training. 
+- [X] Include an explanation describing your reasoning and any other relevant information. 
 
 ### What roles would this live training be suitable for?
 
@@ -81,14 +80,16 @@ Terms like "beginner" and "expert" mean different things to different people, so
 - [ ] Data Consumer
 - [ ] Leader 
 - [ ] Data Analyst
-- [ ] Citizen Data Scientist
+- [X] Citizen Data Scientist
 - [ ] Data Scientist
-- [ ] Data Engineer
+- [X] Data Engineer
 - [ ] Database Administrator
 - [ ] Statistician
-- [ ] Machine Learning Scientist
-- [ ] Programmer
+- [X] Machine Learning Scientist
+- [X] Programmer
 - [ ] Other (please describe)
+
+I added Data Engineer and Programmer because XGBoost
 
 ### What industries would this apply to?
 
@@ -107,6 +108,9 @@ Terms like "beginner" and "expert" mean different things to different people, so
 ## Step 3: Prerequisites
 
 List any prerequisite courses you think your live training could use from. This could be the live session’s companion course or a course you think students should take before the session. Prerequisites act as a guiding principle for your session and will set the topic framework, but you do not have to limit yourself in the live session to the syntax used in the prerequisite courses.
+
+- [Machine Learning with Tree-Based Models in Python](https://learn.datacamp.com/courses/machine-learning-with-tree-based-models-in-python): Course student should take before the session because students should be comfortable with decision trees and familiar with the concept of ensemble methods with tree-based models (boosting, bagging, random forest). Otherwise, I will have to spend too much time introducing these topics.
+-  [Extreme Gradient Boosting with XGBoost](https://learn.datacamp.com/courses/extreme-gradient-boosting-with-xgboost): Companion course, since it focuses on implementation with the XGBoost library. Other courses, including the one above, use the scikit-learn implementation.
 
 
 ## Step 4: Session Outline
