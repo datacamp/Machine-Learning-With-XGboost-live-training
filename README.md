@@ -33,18 +33,17 @@ Note that there will be no pre-processing in this live training. The data will b
 
 _Whether during your opening and closing talk or your live training, you might have to define some terms and jargon to walk students through a problem you’re solving. Intuitive explanations using analogies are encouraged._
 
-- Decision Trees
-- CART 
-- Decision node
-- Boosting
-- Bagging
-- Gradient boosting (aka GBM and GBDT)
-- Loss function
-- Base learners
-- Weak Learners
-- Hyperparameter tuning
-- Grid search
-- Random Search
+- **Decision Trees**: machine learning technique that uses tree structures. At each node, the data is split into pieces based on the value of a feature. The algorithm finds the split by finding the best information gain possible. It can be used for both regression and classification problem.
+- **CART**: stands for *Classification and Regression trees*. Common way to refer to decision trees.
+- **Leaf node**: node that has no children, or leads to no other nodes. At a leaf node, a decision is outputted.
+- **Root node**: the top node of a tree.
+- **Tree Depth**: the length of the longest path from the root node to a leaf node.
+- **Boosting**
+- **Bagging**
+- **Gradient boosting (aka GBM and GBDT)**
+- **Loss function**
+- **Base learners**
+- **Weak Learners**
 
 ### D. What mistakes or misconceptions do you expect? 
 
@@ -55,6 +54,7 @@ _To help minimize the amount of Q&As and make your live training re-usable, list
 - Confusing boosting and bagging
 - Assuming that using XGBoost is always a good idea
 - Assuming that `DMatrix` is the same as `numpy`'s `array` or `pandas`'s `data frames`
+- `XGBoost` is a library specialized in gradient boosting. It is not an acronym or slang for gradient boosting. And, there are other libraries that allow you too implement gradient boostings (e.g, `scikit-learn`).
 
 ### E. What datasets will you use? 
 
@@ -129,39 +129,41 @@ List any prerequisite courses you think your live training could use from. This 
 A live training session usually begins with an introductory presentation, followed by the live training itself, and an ending presentation. Your live session is expected to be around 2h30m-3h long (including Q&A) with a hard-limit at 3h30m. You can check out our live training content guidelines [here](_LINK_). 
 
 
-> _Example from [Python for Spreadsheet Users](https://www.datacamp.com/resources/webinars/live-training-python-for-spreadsheet-users)_
->
-> ### Introduction Slides 
-> - Introduction to the webinar and instructor (led by DataCamp TA)
-> - Introduction to the topics
->   - Discuss need to become data fluent
->   - Define data fluency
->   - Discuss how learning Python fits into that and go over session outline
->   - Set expectations about Q&A
->
-> ### Live Training
-> #### Exploratory Data Analysis
-> - Import data and print header of DataFrame `pd.read_excel()`, `.head()`
-> - Glimpse at the data to
->   - Get column types using `.dtypes`
->   - Use `.describe()`, `.info()`
-> - **Q&A** 
-> #### Data Cleaning and making it ready for analysis
-> - Convert date columns to datetime `pd.to_datetime()`
-> - Change column names
-> - Extract year, month from datetime `.strftime()`
-> - Drop an irrelevant column `.drop()`
-> - Fill missing values with `.fillna()`
-> #### Creating a report
-> - First report question: What is our overall sales performance this year? `.groupby()`, `.plt.plot()`
-> - Second report question: What is our overall sales performance this year? `.merge()`, `.groupby()`, `plt.plot()`
-> - Third report question: What is our overall sales performance this year? `.merge()`, `.groupby()`, `plt.plot()`
-> - **Q&A**
->
-> ### Ending slides
-> - Recap of what we learned
-> - The data science mindset
-> - Call to action and course recommendations
+
+### Introduction Slides 
+- Introduction to the webinar and instructor (led by DataCamp TA)
+- History of gradient boosting going from decision trees, bagging, random Forrests, to boosting. Terms will be explained on top of each other. It will end with an understanding of gradient boosting.
+- Why do you want to use XGBoost? 
+	- Compare its performance with other ML libraries 
+	- Introduce `XGBoost`'s `DMatrix` as an alternative to dataframes
+- Quick overview of the parameters available in gradient boosting
+- Introduction of problem: can we predict whether a hotel booking will be cancelled?
+- Set expectations about Q&A
+
+### Live Training
+#### Your first XGBoost Model
+- Import data and print header of DataFrame `pd.read_excel()`, `.head()`
+- Glimpse at the data to
+  - Get column types using `.dtypes`
+  - Use `.describe()`, `.info()`
+  - **Q&A** 
+
+#### Digging into Parameters
+- Convert date columns to datetime `pd.to_datetime()`
+- Change column names
+- Extract year, month from datetime `.strftime()`
+- Drop an irrelevant column `.drop()`
+- Fill missing values with `.fillna()`
+
+#### Hyperparameter tuning
+- Use `XGBoost`'s [Scikit-Learn API](https://xgboost.readthedocs.io/en/latest/python/python_api.html#module-xgboost.sklearn)
+- Grid search with `scikit-learn`'s `GridSearchCV`
+- Random search with `scikit-learn`'s `RandomizedSearchCV`
+
+### Ending slides
+- Recap of what we learned
+- What are the limits of gradient boosting? When should it not be used?
+- Call to action and course recommendations
 
 ## Authoring your session
 
