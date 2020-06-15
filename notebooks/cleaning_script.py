@@ -26,8 +26,8 @@ bookings['meal'].replace(to_replace = 'SC', value = 'No meal', inplace = True)
 bookings['meal'].replace(to_replace = 'Undefined', value = 'No meal', inplace = True)
 
 # change this column to be binary on whether booked by company or agent
-bookings['company'] = pd.notna(bookings['company'])
-bookings['agent'] = pd.notna(bookings['agent'])
+bookings['company'] = pd.notna(bookings['company']).astype(int)
+bookings['agent'] = pd.notna(bookings['agent']).astype(int)
 
 # fill the child column since it has some n/as
 bookings['children'].fillna(0)
@@ -37,9 +37,9 @@ bookings = bookings.rename(columns={"adr": "avg_daily_rate", "company": "booked_
 
 clean_features = ["is_canceled", "lead_time","arrival_date_week_number","arrival_date_day_of_month", "arrival_date_month",
     "stays_in_weekend_nights","stays_in_week_nights","adults","children", "babies","is_repeated_guest", "previous_cancellations",
-    "previous_bookings_not_canceled", "required_car_parking_spaces", "total_of_special_requests", "avg_daily_rate"]
+    "previous_bookings_not_canceled", "required_car_parking_spaces", "total_of_special_requests", "avg_daily_rate", "booked_by_company","booked_by_agent"]
 
-cat_features = ["hotel","meal","market_segment", "distribution_channel","reserved_room_type","deposit_type","customer_type","booked_by_company","booked_by_agent"]
+cat_features = ["hotel","meal","market_segment", "distribution_channel","reserved_room_type","deposit_type","customer_type"]
 
 clean_df = bookings[clean_features]
 
@@ -47,3 +47,4 @@ for c in cat_features:
     clean_df = clean_df.join(pd.get_dummies(bookings[c], prefix=c))
 
 clean_df.to_csv("../data/hotel_bookings_clean.csv", encoding='utf-8', index=False)
+
