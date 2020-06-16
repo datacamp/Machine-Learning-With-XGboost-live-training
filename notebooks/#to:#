@@ -1,0 +1,194 @@
+  /usr/local/share/emacs/site-lisp/gettext
+  ==> Summary
+  ð  /usr/local/Cellar/gettext/0.20.2_1: 1,929 files, 18.7MB
+  ==> Installing graphviz dependency: libffi
+  ==> Pouring libffi-3.3.mojave.bottle.tar.gz
+  ==> Caveats
+  libffi is keg-only, which means it was not symlinked into /usr/local,
+  because macOS already provides this software and installing another version in
+  parallel can cause all kinds of trouble.
+
+  For compilers to find libffi you may need to set:
+    export LDFLAGS="-L/usr/local/opt/libffi/lib"
+                                                  lude"
+
+						  ==> Summary
+						  ð  /usr/local/Cellar/libffi/3.3: 16 files, 484.8KB
+						  ==> Installing graphviz dependency: pcre
+						  ==> Pouring pcre-8.44.mojave.bottle.tar.gz
+						  ð  /usr/local/Cellar/pcre/8.44: 204 files, 5.5MB
+						  ==> Installing graphviz de==> Installing graphviz de==> Installingoj==> Installing graphviz de==> Installing graphvi/1==> Installing graphviz de==> Installing gap==> Installing graphviz de==> Installing graphvi@1==> Instalmo==> Installing graphviz de==> Installine has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> /Users/lissulmont/.bash_profile
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+==> Summary
+ð  /usr/local/Cellar/openssl@1.1/1.1.1g: 8,059 files, 18MB
+==> Installing graphviz dependency: readline
+==> Pouring readline-8.0.4.mojave.bottle.tar.gz
+==> Caveats
+readline is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides BSD libedit.
+
+For compilers to find readline you may need to set:
+  export LDFLAGS="-L/usr/local/opt/readline/lib"
+  export CPPFLAGS="-I/usr/local/opt/readline/include"
+
+==> Summary
+ð  /usr/local/Cellar/readline/8.0.4: 48 files, 1.5MB
+==> Installing graphviz dependency: sqlite
+==> Pouring sqlite-3.32.1.mojave.bottle.tar.gz
+==> Caveats
+sqlite is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+If you need to have sqlite first in your PATH run:
+  echo 'export PATH="/usr/local/opt/sqlite/bin:$PATH"' >> /Users/lissulmont/.bash_profile
+
+For compilers to find sqlite you may need to set:
+  export LDFLAGS="-L/usr/local/opt/sqlite/lib"
+  export CPPFLAGS="-I/usr/local/opt/sqlite/include"
+
+==> Summary
+ð  /usr/local/Cellar/sqlite/3.32.1: 11 files, 4MB
+==> Installing graphviz dependency: xz
+==> Pouring xz-5.2.5.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/xz/5.2.5: 92 files, 1.1MB
+==> Installing graphviz dependency: python@3.8
+==> Pouring python@3.8-3.8.3.mojave.bottle.tar.gz
+==> /usr/local/Cellar/python@3.8/3.8.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose
+==> /usr/local/Cellar/python@3.8/3.8.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose
+==> /usr/local/Cellar/python@3.8/3.8.3/bin/python3 -s setup.py --no-user-cfg install --force --verbose
+==> Caveats
+Python has been installed as
+  /usr/local/opt/python@3.8/bin/python3
+
+You can install Python packages with
+  /usr/local/opt/python@3.8/bin/pip3 install <package>
+They will install into the site-package directory
+  /usr/local/opt/python@3.8/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages
+
+See: https://docs.brew.sh/Homebrew-and-Python
+
+python@3.8 is keg-only, which means it was not symlinked into /usr/local,
+because this is an alternate version of another formula.
+
+If you need to have python@3.8 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/python@3.8/bin:$PATH"' >> /Users/lissulmont/.bash_profile
+
+For compilers to find python@3.8 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/python@3.8/lib"
+
+==> Summary
+ð  /usr/local/Cellar/python@3.8/3.8.3: 4,125 files, 62.8MB
+==> Installing graphviz dependency: glib
+==> Pouring glib-2.64.3.mojave.bottle.tar.gz
+==> Caveats
+Bash completion has been installed to:
+  /usr/local/etc/bash_completion.d
+==> Summary
+ð  /usr/local/Cellar/glib/2.64.3: 436 files, 15.7MB
+==> Installing graphviz dependency: jasper
+==> Pouring jasper-2.0.16_1.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/jasper/2.0.16_1: 40 files, 1.4MB
+==> Installing graphviz dependency: netpbm
+==> Pouring netpbm-10.86.13.mojave.bottle.1.tar.gz
+ð  /usr/local/Cellar/netpbm/10.86.13: 410 files, 6.5MB
+==> Installing graphviz dependency: gts
+==> Pouring gts-0.7.6_2.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/gts/0.7.6_2: 27 files, 1.1MB
+==> Installing graphviz dependency: libtool
+==> Pouring libtool-2.4.6_1.mojave.bottle.tar.gz
+==> Caveats
+In order to prevent conflicts with Apple's own libtool we have prepended a "g"
+so, you have instead: glibtool and glibtoolize.
+==> Summary
+ð  /usr/local/Cellar/libtool/2.4.6_1: 71 files, 3.7MB
+==> Installing graphviz dependency: lzo
+==> Pouring lzo-2.10.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/lzo/2.10: 31 files, 549.7KB
+==> Installing graphviz dependency: pixman
+==> Pouring pixman-0.40.0.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/pixman/0.40.0: 14 files, 1.3MB
+==> Installing graphviz dependency: cairo
+==> Pouring cairo-1.16.0_3.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/cairo/1.16.0_3: 117 files, 5.5MB
+==> Installing graphviz dependency: fribidi
+==> Pouring fribidi-1.0.9.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/fribidi/1.0.9: 67 files, 600.4KB
+==> Installing graphviz dependency: graphite2
+==> Pouring graphite2-1.3.14.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/graphite2/1.3.14: 18 files, 231.3KB
+==> Installing graphviz dependency: icu4c
+==> Pouring icu4c-67.1.mojave.bottle.tar.gz
+==> Caveats
+icu4c is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides libicucore.dylib (but nothing else).
+
+If you need to have icu4c first in your PATH run:
+  echo 'export PATH="/usr/local/opt/icu4c/bin:$PATH"' >> /Users/lissulmont/.bash_profile
+  echo 'export PATH="/usr/local/opt/icu4c/sbin:$PATH"' >> /Users/lissulmont/.bash_profile
+
+For compilers to find icu4c you may need to set:
+  export LDFLAGS="-L/usr/local/opt/icu4c/lib"
+  export CPPFLAGS="-I/usr/local/opt/icu4c/include"
+
+==> Summary
+ð  /usr/local/Cellar/icu4c/67.1: 258 files, 71MB
+==> Installing graphviz dependency: harfbuzz
+==> Pouring harfbuzz-2.6.6_1.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/harfbuzz/2.6.6_1: 165 files, 11.4MB
+==> Installing graphviz dependency: pango
+==> Pouring pango-1.44.7.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/pango/1.44.7: 62 files, 4.3MB
+==> Installing graphviz
+==> Pouring graphviz-2.44.0.mojave.bottle.tar.gz
+ð  /usr/local/Cellar/graphviz/2.44.0: 508 files, 11MB
+==> Caveats
+==> gettext
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/gettext
+==> libffi
+libffi is keg-only, which means it was not symlinked into /usr/local,
+because macOS already provides this software and installing another version in
+parallel can cause all kinds of trouble.
+
+For compilers to find libffi you may need to set:
+  export LDFLAGS="-L/usr/local/opt/libffi/lib"
+  export CPPFLAGS="-I/usr/local/opt/libffi/include"
+
+==> openssl@1.1
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl@1.1/certs
+
+and run
+  /usr/local/opt/openssl@1.1/bin/c_rehash
+
+openssl@1.1 is keg-only, which means it was not symlinked into /usr/local,
+because macOS provides LibreSSL.
+
+If you need to have openssl@1.1 first in your PATH run:
+  echo 'export PATH="/usr/local/opt/openssl@1.1/bin:$PATH"' >> /Users/lissulmont/.bash_profile
+
+For compilers to find openssl@1.1 you may need to set:
+  export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+  export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+==> readline
+readline is keg-only, which means it was not symlinked into /usr/local,
+because ma
+c
