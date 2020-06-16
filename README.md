@@ -138,6 +138,7 @@ A live training session usually begins with an introductory presentation, follow
 	- Introduce `XGBoost`'s `DMatrix` as an alternative to dataframes
 - Quick overview of the parameters available in gradient boosting
    - *(most important time priority wise)* Discuss the different `booster` options and note that we will be using `gbtree` which uses a tree as a weak learner (this is the default and the most common). In contrast, there is a `gblinear` option that uses linear regression as a weak learner.
+   - early stopping
 - Introduction of problem: can we predict whether a hotel booking will be cancelled?
 - Set expectations about Q&A
 
