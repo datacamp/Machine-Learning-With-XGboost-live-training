@@ -47,10 +47,11 @@ for c in cat_features:
     clean_df = clean_df.join(pd.get_dummies(bookings[c], prefix=c))
 
 clean_df = clean_df.rename(columns={"hotel_City Hotel": "hotel_City", "hotel_Resort Hotel": "hotel_Resort",
-                                        "market_segment_Offline TA/TO": "market_segment_Offlin_TA_TO",
+                                        "market_segment_Offline TA/TO": "market_segment_Offline_TA_TO",
                                         "market_segment_Online TA": "market_segment_Online_TA",
                                         "distribution_channel_TA/TO": "distribution_channel_TA_TO",
                                         "deposit_type_No Deposit": "deposit_type_No_Deposit",
-                                        "deposit_type_Non Refund": "deposit_type_Non_Refund"})
+                                        "deposit_type_Non Refund": "deposit_type_Non_Refund",
+                                        "meal_No meal": "meal_No_meal"})
 
 clean_df.to_csv("../data/hotel_bookings_clean.csv", encoding='utf-8', index=False)
