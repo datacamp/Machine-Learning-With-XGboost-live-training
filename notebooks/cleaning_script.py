@@ -46,5 +46,9 @@ clean_df = bookings[clean_features]
 for c in cat_features:
     clean_df = clean_df.join(pd.get_dummies(bookings[c], prefix=c))
 
+# get rid of spaces in column names
+clean_df.rename(columns = lambda x: x.replace(' ', '_'), inplace=True)
+
+
 clean_df.to_csv("../data/hotel_bookings_clean.csv", encoding='utf-8', index=False)
 
