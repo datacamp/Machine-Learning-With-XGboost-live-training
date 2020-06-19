@@ -54,4 +54,3 @@ clean_df = clean_df.rename(columns={"hotel_City Hotel": "hotel_City", "hotel_Res
                                         "deposit_type_Non Refund": "deposit_type_Non_Refund"})
 
 clean_df.to_csv("../data/hotel_bookings_clean.csv", encoding='utf-8', index=False)
-
